@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Admin Dashboard
+    </title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-wrapper">
+
+    <!-- LOGIN -->
+
+    <div class="login-box"
+         id="loginBox">
+
+        <h1>
+            ADMIN LOGIN
+        </h1>
+
+        <input type="password"
+               id="password"
+               placeholder="Nhập mật khẩu">
+
+        <button onclick="loginAdmin()">
+            Đăng Nhập
+        </button>
+
+    </div>
+
+    <!-- PANEL -->
+
+    <div class="admin-container"
+         id="adminPanel"
+         style="display:none;">
+
+        <div class="admin-topbar">
+
+            <h1>
+                ADMIN DASHBOARD
+            </h1>
+
+            <button class="logout-btn"
+                    onclick="logoutAdmin()">
+
+                Đăng Xuất
+
+            </button>
+
+        </div>
+
+        <!-- AVATAR -->
+
+        <div class="admin-section">
+
+            <h2>
+                Ảnh Đại Diện
+            </h2>
+
+            <div class="avatar-preview-box">
+
+                <img id="avatarPreview"
+                     class="avatar-preview"
+                     src="assets/avatar.jpg">
+
+            </div>
+
+            <input type="file"
+                   id="avatarInput"
+                   accept="image/*"
+                   onchange="previewAvatar(event)">
+
+        </div>
+
+        <!-- PERSONAL -->
+
+        <div class="admin-section">
+
+            <h2>
+                Thông Tin Cá Nhân
+            </h2>
+
+            <div class="admin-grid">
+
+                <input type="text"
+                       id="nameInput"
+                       placeholder="Họ và Tên">
+
+                <input type="text"
+                       id="nicknameInput"
+                       placeholder="Biệt Danh">
+
+                <input type="text"
+                       id="tagInput"
+                       placeholder="Tag">
+
+            </div>
+
+        </div>
+
+        <!-- INTRO -->
+
+        <div class="admin-section">
+
+            <h2>
+                Giới Thiệu
+            </h2>
+
+            <textarea id="introInput"
+                      rows="6"
+                      placeholder="Giới thiệu"></textarea>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="admin-section">
+
+            <h2>
+                Liên Hệ
+            </h2>
+
+            <div class="admin-grid">
+
+                <input type="text"
+                       id="facebookInput"
+                       placeholder="Facebook">
+
+                <input type="text"
+                       id="githubInput"
+                       placeholder="Github">
+
+                <input type="text"
+                       id="emailInput"
+                       placeholder="Email">
+
+            </div>
+
+        </div>
+
+        <button class="save-btn"
+                onclick="saveContent()">
+
+            Lưu Nội Dung
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
